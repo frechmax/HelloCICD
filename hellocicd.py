@@ -1,19 +1,10 @@
-import datetime
+import folium
 
-now = datetime.datetime.now()
-html_content = f"""
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>Timestamp: {now}</p>
-</body>
-</html>
-"""
+# Create a map centered at a specific location (e.g., Berlin)
+m = folium.Map(location=[52.52, 13.405], zoom_start=10)
 
-with open('output/index.html', 'w', encoding='utf-8') as f:
-    f.write(html_content)
+# Add a marker (optional)
+folium.Marker([52.52, 13.405], popup="Berlin").add_to(m)
+
+# Save the map to output/index.html
+m.save('output/index.html')

@@ -25,7 +25,9 @@ jobs:
         with:
           python-version: '3.x'
       - name: Install dependencies
-        run: pip install --upgrade pip
+        run: |
+          pip install --upgrade pip
+          pip install folium
       - name: Run Hello World script
         run: python hellocicd.py
       - name: Upload output to GitHub Pages

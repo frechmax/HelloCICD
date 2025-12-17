@@ -1,4 +1,4 @@
-name: Run HelloCICD and Deploy to Pages
+name: Static Template HelloCICD and Deploy to Pages
 
 on:
   push:
