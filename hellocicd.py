@@ -15,5 +15,5 @@ html_content = f"""
 </html>
 """
 
-with open('output/hello.html', 'w', encoding='utf-8') as f:
+with open('output/index.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
