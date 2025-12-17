@@ -30,8 +30,8 @@ jobs:
           pip install folium
       - name: Run Hello World script
         run: python hellocicd.py
-      - name: Upload output to GitHub Pages
+      - name: Upload index.html to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          publish_dir: .
